@@ -10,4 +10,8 @@ fun main() {
     b?.length // safe call without NPE
 
     println(b?.length)
+
+    // Elvis operator
+    val length = b?.length ?: -1
+    println(length)
 }
