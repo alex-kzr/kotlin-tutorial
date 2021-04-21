@@ -14,4 +14,8 @@ fun main() {
     // Elvis operator
     val length = b?.length ?: -1
     println(length)
+
+    b = if ((0..10).random() > 5) "afdf" else null
+    // !!
+    val t = b!!.length // throw NPE if contains null
 }
