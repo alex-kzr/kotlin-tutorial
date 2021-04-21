@@ -5,4 +5,18 @@ fun main() {
     println(a.map { e -> e * 2 })
     println(a.filter { e -> e % 2 == 0 })
     println(a.reduce { sum, e -> sum + e })
+
+    a.sortedByDescending { it }
+
+    a.any { it > 10 } // false
+    a.all { it < 10 } // true
+
+    val numbers = listOf(1, 3, -4, 2, -11)
+    val (positive, negative) = numbers.partition { it > 0 }
+
+    println(positive) // [1, 3, 2]
+    println(negative) // [-4, -11]
+
+    val result = listOf("a", "b", "ba", "ccc", "ad").groupBy { it.length }
+    println(result) // {1=[a, b], 2=[ba, ad], 3=[ccc]}
 }
