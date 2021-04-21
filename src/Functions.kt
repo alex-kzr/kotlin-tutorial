@@ -30,3 +30,8 @@ fun testNamedArguments(x: Int, y: Int, z: Int): List<Int> {
 fun testDefaultArguments(x: Int = 1, y: Int = 99) {
     println(x + y)
 }
+
+// overloading
+fun foo(name: String, number: Int = 42, toUpperCase: Boolean = false): String {
+    return (if (toUpperCase) name.toUpperCase() else name) + number
+}
